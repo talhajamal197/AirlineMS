@@ -12,7 +12,7 @@ console.log("at root route");
 res.render('home_copy.ejs');
 });
 app.get('/login',(req,res)=>{
-
+console.log('On login route');
 res.render('loginSignup_copy.ejs');
 });
 app.get('/searchFlights',(req,res)=>{
