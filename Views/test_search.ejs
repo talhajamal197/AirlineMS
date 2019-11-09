@@ -1,8 +1,8 @@
+
 <%- include ./partials/header.ejs %>
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="styles/navBar.css">
 <link rel="stylesheet" type="text/css" href="styles/footer.css">
-<link rel="stylesheet" type="text/css" href="styles/loginSignup.css">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -13,6 +13,9 @@
 			padding: 0px;
 			margin: 0px;
 		}
+		#myNavBar{
+	font-size: 18px;
+}
 		.table-box{
 			margin: 50px auto;
 			
@@ -60,15 +63,12 @@
 			margin: 50px auto;
 		}
 		h3{
-			margin-top: 5px;
 			text-align: center;
 			color: blue;
 		}
-		h3 a:hover{
-          text-decoration: none;
-		}
+
 	</style>
-		<nav id="myNavBar"class="navbar navbar-expand-lg navbar-dark">
+	<nav id="myNavBar"class="navbar navbar-expand-lg navbar-dark">
   <div class="navbar-brand"><a href="/" id="brandPlane" class="fa fa-plane"><span style="color:rgb(0, 123, 255);">SkyTek</span></a></div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,16 +77,17 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     
     	 <ul class="navbar-nav ml-auto">
-    	 	<li><a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a></li>
+    	 	<li><a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a></li>
       
-      <li><a class="nav-item nav-link" href="#">Login</a></li>
+      <li><a class="nav-item nav-link" href="login">Login</a></li>
       <li><a class="nav-item nav-link" href="#">Check Flights</a></li>
       <li><a class="nav-item nav-link" href="#">Ticket Reservation</a></li>
       </ul>
     
   </div>
 </nav>  
-<h3> <a href="/">Search Again</a></h3>
+<h3><a href="/">Search again</a></h3>
+
 <div class="table-box">
 	<div class="table-row table-head">
 		<div class="table-cell">
@@ -111,35 +112,38 @@
 			<p>Selection</p>
 		</div>
 	</div>
-	<div class="table-row">
-		<div class="table-cell">
-			<p><img src="/assets/airlines/AC.png"></p>
-			<p>Air canada</p>
-		</div>
-		<div class="table-cell">
-			<p>Ca4343</p>
-		</div>
-			<div class="table-cell">
-			<p>Canada 3:30pm</p>
-		</div>
-			<div class="table-cell">
-			<p>Pakistan 12:00am</p>
-		</div>
-	    <div class="table-cell">
-			<p>6:00 hrs</p>
-		</div>
-		<div class="table-cell">
-			<p>Pkr140,0000</p>
+
+	
+	<% for(i=0;i<ssData.length;i++) { %>
+		 <div class="table-row"> 
+		 <div class="table-cell"> 
+			<p><img src="../public/assets/airlines/AC.png"></p> 
+			 <p>Air canada</p> 
+			 </div> 
+			 <div class="table-cell"> 
+					<p> <%= ssData[i].flightNo %> </p> 
+				 </div> 
+					<div class="table-cell"> 
+						<p><%= ssData[i].departure %></p> 
+					 </div> 
+						<div class="table-cell"> 
+							<p> <%= ssData[i].arrival %> </p> 
+						 </div> 
+						 <div class="table-cell"> 
+								<p> <%= ssData[i].duration %> </p> 
+							 </div> 
+							 <div class="table-cell"> 
+								 <p> <%= ssData[i].price %> </p> 
 			
-		</div>
-		<div class="table-cell">
-			<button class="btn btn-danger">Select</button>
+								 </div> 
+								 <div class="table-cell"> 
+									 <button class="btn btn-danger">Select</button> 
 			
-		</div>
-			
-			
+									 </div>	
 		
-	</div>
+									 </div> 
+									 <% } %>
+									
 </div>
-<!--<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+
 <%- include ./partials/footer.ejs %>
