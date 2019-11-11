@@ -16,10 +16,6 @@ console.log('On login route');
 res.render('loginSignup_copy.ejs');
 });
 
-
-
-
-
 function Flight(flightNo,departure,arrival,duration,price){
 	this.flightNo=flightNo;
 	this.departure=departure;
@@ -27,39 +23,27 @@ function Flight(flightNo,departure,arrival,duration,price){
 	this.duration=duration;
 	this.price=price;
 }
-var flightObj=new Flight('pk301','pakistan 1:30pm','Canada 3:30pm','6:00pm','Pkr100,0000');
-var flightArr=[flightObj];
-flightArr.push(flightObj);
-flightArr.push(flightObj);
-flightArr.push(flightObj);
-
-
+var obj=new Flight('pk301','pakistan 1:30pm','Canada 3:30pm','6:00pm','Pkr800,0000');
+var arr=[obj];
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
+arr.push(obj);
 app.get('/searchFlights',(req,res)=>{
 	console.log(req.query.to);
-res.render('test_search.ejs',{ssData:flightArr});
+res.render('test_search.ejs',{ssData:arr});
 });
-
-function flightReq(flightNumber,source,destination,startTime,stay){
-	this.flightNo=flightNumber;
-	this.source=source;
-	this.destination=destination;
-	this.startTime=startTime;
-	this.stay=stay;
-}
-var flightReqObj=new flightReq('pk301','pakistan','israel','6:00pm','5');
-var flightReqArr=[flightReqObj];
-flightReqArr.push(flightReqObj);
-flightReqArr.push(flightReqObj);
-flightReqArr.push(flightReqObj);
-
-
-app.get('/admin_type=req',(req,res)=>{
+app.get('/admin',(req,res)=>{
 	
-res.render('admin.ejs',{ssData:flightReqArr});
+res.render('admin.ejs');
 });
-
-
-
 app.get('/purchaseHistory',(req,res)=>{
 	
 res.render('purchaseHistory.ejs');
