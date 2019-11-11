@@ -30,18 +30,7 @@
   </div>
 </nav>  
 
-        <p class="endgame">SkyTec Admin Panel</p>
-        <div class="topnav">
-                <p class="skytec">SkyTec Admin Panel</p>
-                <a href="#signout">Signout</a>
-                
-                <a href="#Reservations">Reservation</a>
-                <a href="#CheckFlight">Check Flight</a>
-                <a href="#home">Home</a>
-               
-                
-         </div>
-
+        
 
 
 
@@ -285,23 +274,24 @@
               <script>
                     function openCity(evt, cityName) {
                     // Declare all variables
-                    var i, tabcontent, tablinks;
-                    
-                    // Get all elements with class="tabcontent" and hide them
-                    tabcontent = document.getElementsByClassName("tabcontent");
-                    for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
-                    }
+                                        var i, tabcontent, tablinks;
+                                        
+                                        // Get all elements with class="tabcontent" and hide them
+                                        tabcontent = document.getElementsByClassName("tabcontent");
+                                        for (i = 0; i < tabcontent.length; i++) {
+                                                tabcontent[i].style.display = "none";
+                                        }
+                                       
+                                        // Get all elements with class="tablinks" and remove the class "active"
+                                        tablinks = document.getElementsByClassName("tablinks");
+                                        
+                                        for (i = 0; i < tablinks.length; i++) {
+                                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                        }
 
-                    // Get all elements with class="tablinks" and remove the class "active"
-                    tablinks = document.getElementsByClassName("tablinks");
-                    for (i = 0; i < tablinks.length; i++) {
-                        tablinks[i].className = tablinks[i].className.replace(" active", "");
-                    }
-
-                    // Show the current tab, and add an "active" class to the link that opened the tab
-                    document.getElementById(cityName).style.display = "block";
-                    evt.currentTarget.className += " active";
+                                        // Show the current tab, and add an "active" class to the link that opened the tab
+                                        document.getElementById(cityName).style.display = "block";
+                                        evt.currentTarget.className += " active";
                     }
                                  
               </script>

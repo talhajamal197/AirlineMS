@@ -23,7 +23,7 @@ function Flight(flightNo,departure,arrival,duration,price){
 	this.duration=duration;
 	this.price=price;
 }
-var obj=new Flight('pk301','pakistan 1:30pm','Canada 3:30pm','6:00pm','Pkr100,0000');
+var obj=new Flight('pk301','pakistan 1:30pm','Canada 3:30pm','6:00pm','Pkr800,0000');
 var arr=[obj];
 arr.push(obj);
 arr.push(obj);
