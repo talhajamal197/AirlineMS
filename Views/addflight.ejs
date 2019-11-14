@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>Add Flight</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="addflight.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+<div class="navbar-brand"><a href="/" id="brandPlane" class="fa fa-plane"><span style="color:#FF1493;">SkyTek</span></a></div>
+ 
+  <a href="#Delay Flight">Signout</a>
+  <a href="#Delay Flight">Delay Flight</a>
+  <a href="#Cancel Flight">Cancel Flight</a>
+  <a href="#Add Flight" class="active">Add Flight</a>
+  <a href="#Delay Flight">Profile</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+ </div>
+<div>
+</div>
+ <p><h5>Welcome to SkyTek! World's leading place for your ease in travelling by Air.</h5></p>
+</div>
+
+
+
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Flight Number</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="fname" placeholder="Flight Number">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="acity">Arrival City</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="acity" name="acity" placeholder="Arrival City">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="dcity">Destination City</label>
+      </div>
+      <div class="col-75">
+      	  <input type="text" id="dcity" name="dcity" placeholder="Destination City">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="stay">Stay</label>
+      </div>
+      <div class="col-25">
+          <input type="text" id="stay1" name="stay1" placeholder="stay1">
+      </div>
+      <div class="col-25">
+          <input type="text" id="stay2" name="stay2" placeholder="stay2">
+      </div>
+      <div class="col-25">
+          <input type="text" id="stay3" name="stay3" placeholder="stay3">
+      </div>
+    </div>
+    <div class="row">
+     <div class="col-25">
+       <label for="atime">Arrival Time</label>
+      </div>
+     <div class="col-75">
+       <input type="datetime-local" id="atime" name="atime" placeholder="Atime">
+     </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Request Flight For Approval">
+    </div>
+  </form>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>
