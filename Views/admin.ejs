@@ -30,18 +30,7 @@
   </div>
 </nav>  
 
-        <p class="endgame">SkyTec Admin Panel</p>
-        <div class="topnav">
-                <p class="skytec">SkyTec Admin Panel</p>
-                <a href="#signout">Signout</a>
-                
-                <a href="#Reservations">Reservation</a>
-                <a href="#CheckFlight">Check Flight</a>
-                <a href="#home">Home</a>
-               
-                
-         </div>
-
+        
 
 
 
@@ -192,16 +181,17 @@
                                                        
                                                 </tr>
                                                 <tr>
-                                                  
-                                                  <td><i class="fa fa-check">123</i></td>
-                                                  <td><i class="fa fa-check">pakistan</i></td>
-                                                  <td><i class="fa fa-check">india</i></td>
-                                                  <td><i class="fa fa-check">00:00am</i></td>
-                                                  <td><i class="fa fa-check">3</i></td>
+                                                        <% for(i=0;i<ssData.length;i++) { %>
+                                                  <td><i class="fa fa-check"> <%=ssData[i].flightNo %> </i></td>
+                                                  <td><i class="fa fa-check"> <%=ssData[i].source %> </i></td>
+                                                  <td><i class="fa fa-check"> <%=ssData[i].destination %> </i></td>
+                                                  <td><i class="fa fa-check"> <%=ssData[i].startTime %> </i></td>
+                                                  <td><i class="fa fa-check"> <%=ssData[i].stay %> </i></td>
                                                   <td><i>  <button class ="buttonAccept">Accept</button> <button class ="buttonReject">Reject</button></i></td>
                                                   
                                 
                                                 </tr>
+                                                <% } %>
                                                 <tr>
                                                         <td><i class="fa fa-check">123</i></td>
                                                   <td><i class="fa fa-check">pakistan</i></td>
