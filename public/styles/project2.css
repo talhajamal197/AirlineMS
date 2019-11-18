@@ -75,7 +75,7 @@ label
 }
 
 .bg-img {
-  background-image: url("airplane.jpg");
+  background-image: url("../assets/airlineSignupimage.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
