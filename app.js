@@ -57,7 +57,9 @@ res.redirect('/');
 }
 
 });
-
+app.get("/userProfile",(req,res)=>{
+res.render("userProfile.ejs");
+});
 app.post('/login',(req,res)=>{
 UserPrototype.exist(req.body.user).then((val)=>{
 		UserPrototype.findUserDetails(req.body.user,req.body.pass).then((info)=>{
