@@ -60,6 +60,26 @@ res.redirect('/');
 app.get("/userProfile",(req,res)=>{
 res.render("userProfile.ejs");
 });
+app.get("/purchaseHistory",(req,res)=>{
+res.render("purchaseHistory.ejs");
+});
+//mybookings here
+app.get("/airlineLogin",(req,res)=>{
+res.render("airlineLogin.ejs");
+});
+app.get("/airlineSignup",(req,res)=>{
+res.render("airlineSignup.ejs");
+});
+
+app.get("/addFlight",(req,res)=>{
+res.render("addflight.ejs");
+}); //Css or bootstrap
+app.get("/cancelFlight",(req,res)=>{
+res.render("cancelflight.ejs");
+});
+app.get("/delayFlight",(req,res)=>{
+res.render("delayflight.ejs");
+});
 app.post('/login',(req,res)=>{
 UserPrototype.exist(req.body.user).then((val)=>{
 		UserPrototype.findUserDetails(req.body.user,req.body.pass).then((info)=>{
@@ -112,11 +132,6 @@ res.render('admin.ejs',{ssData:flightReqArr});
 });
 
 
-
-app.get('/purchaseHistory',(req,res)=>{
-	
-res.render('purchaseHistory.ejs');
-});
 app.listen(3000,()=>{
 console.log('Server listening on port 3000');
 
