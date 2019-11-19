@@ -1,0 +1,216 @@
+<!Doctype html>
+<html>
+<head>
+	<title> Bootstrap Basic</title>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/project.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+
+<div class="topnav" id="myTopnav">
+ <div class="navbar-brand"><a href="/" id="brandPlane" class="fa fa-plane"><span style="color:#FF1493;">SkyTek</span></a>
+ </div>
+ <a href="#Profile" class="active">Profile</a>
+ <a href="#Ticket Reservation">Ticket Reservation</a>
+ <a href="#Check Flight">Check Flight</a>
+ <a href="#Login">Login</a>
+ <a href="#Home">Home</a>
+ <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+ </a>
+ </div> 
+<div class="sidebar">
+ <a class="active" href="#Edit Profile">Edit Profile</a>
+ <a href="#Purchase History">Purchase History</a>
+ 
+ <a href="#Signout">Signout</a>
+</div>
+<div>
+ <p>
+  <h5>Welcome to SkyTek! World's leading place for your ease in travelling by Air.</h5>  
+ </p>
+</div>
+
+
+<form class = "form1">  
+  <div class ="container">
+   <div class ="Content-Pannel">
+    <div class = "Header-Pannel">
+     <h4>Personal Information</h4>
+    </div>
+    <div class ="container">
+      <div class = "three-cols form-row">
+       <div class = "cols">
+        <div class="form-group">
+         <label for="Status">Status</label>
+         <select class="form-control" name="Status" id="Status" style=" width:200px;" required >
+          <option>Select</option>
+          <option>Mr</option>
+          <option>Ms</option>
+          <option>Mrs</option>
+         </select>
+        </div>  
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="FirstName">First Name</Label>
+         <input type="text" class="form-control" id="FirstName" name="FirstName"  Placeholder ="First Name" required>
+        </div>
+       </div>  
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="LastName">Last Name</Label>
+         <input type="text" class="form-control" name="LastName" id="LastName" Placeholder ="Last Name" required>
+        </div>
+       </div>          
+      </div>
+    </div>
+    <div class ="container">
+      <div class = "three-cols form-row">
+       <div class = "cols">
+        <div class="form-group">
+         <Label for="DateOfBirth">Date Of Birth</Label>
+         <input class="form-control" type="date" name="DateOfBirth" id="DateOfBirth" Placeholder ="" required>
+        </div>  
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="ContactNumber1">Contact Number 1</Label>
+         <input type="tel" class="form-control" name="ContactNumber1"id="ContactNumber1" Placeholder ="0000-0000000" required>
+        </div>
+       </div>  
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="ContactNumber2">Contact Number 2</Label>
+         <input type="tel" class="form-control" id="ContactNumber2" Placeholder ="0000-0000000" required>
+        </div>
+       </div>          
+      </div>  
+    </div>
+   </div> 
+  </div> 
+  <div class ="container">
+   <div class ="Content-Pannel">
+    <div class ="header-pannel">
+     <h4>Address</h4>
+    </div>  
+    <div class ="container">
+      <div class = "three-cols form-row">
+       <div class = "cols">
+        <div class="form-group">
+         <label for="Country">Country</label>
+         <input type="text" class="form-control" id="Country" Placeholder ="Pakistan" required>
+        </div>  
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="Address1">Current Address</Label>
+         <input type="text" class="form-control" id="Address1" Placeholder ="" required>
+        </div>
+       </div>   
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="Address2">Permenant Address</Label>
+         <input type="text" class="form-control" id="Address2" Placeholder ="" required>
+        </div>
+       </div>          
+      </div>  
+    </div>
+    <div class ="container">
+      <div class = "two-cols form-row">
+       <div class = "cols">
+        <div class="form-group">
+         <Label for="City">City</Label>
+         <input type="text" class="form-control" id="City" Placeholder ="Karachi" required>
+        </div>  
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="ZipCode">Zip Code</Label>
+         <input type="Number" class="form-control" id="ZipCode" Placeholder ="75950" required>
+        </div>
+       </div>          
+      </div>  
+    </div>
+   </div>
+  </div> 
+  <div class ="container">
+   <div class="Content-Panel">
+    <div class="Header-Panel">
+     <h4>Email</h4>
+    </div>
+    <div class ="container"> 
+      <div class = "three-cols form-row">
+       <div class = "cols">
+        <div class="form-group">
+         <Label for="CurrentEmail">Current Email</Label>
+         <input type="email" class="form-control" id="CurrentEmail" Placeholder ="abc@gmail.com" required>
+        </div>  
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="NewEmail">New Email</Label>
+         <input type="email" class="form-control" id="NewEmail" Placeholder ="abc@gmail.com" required>
+        </div>
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="ConfirmEmail">Confirm Email</Label>
+         <input type="email" class="form-control" id="ConfirmEmail" Placeholder ="abc@gmail.com" required>
+        </div>
+       </div>          
+      </div>  
+    </div>
+   </div>
+  </div>
+  <div class ="container">
+   <div class="Content-Panel">
+    <div class="Header-Panel">
+     <h4>Password</h4>
+    </div>
+    <div class ="container">
+      <div class = "two-cols form-row">
+       <div class = "cols">
+        <div class="form-group">
+         <Label for="Password">Password</Label>
+         <input type="password" class="form-control" id="Password" Placeholder ="abc1234!@#$" required>
+        </div>  
+       </div>
+       <div class = "cols">
+        <div class = "form-group">
+         <Label for="NewPassword">New Password</Label>
+         <input type="password" class="form-control" id="NewPassword" Placeholder ="abc1234!@#$" required>
+        </div>
+       </div>
+      </div>  
+    </div>
+   </div>
+  </div>
+  <div class ="container">
+   <input type="submit" class="btn btn-info" value="Submit" id="submit">
+  </div>
+</form>
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>
