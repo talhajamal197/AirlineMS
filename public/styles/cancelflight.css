@@ -65,7 +65,7 @@
 
 h5{
   	
-  margin-left:175px;
+  /*margin-left:175px;*/
   font-size: 25px;
   color:#4CAF50;
   float:center;
@@ -97,6 +97,7 @@ label {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  margin-top:5%;
 }
 
 /* Floating column for labels: 25% width */
