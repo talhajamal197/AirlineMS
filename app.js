@@ -22,6 +22,7 @@ var user='fahad';
 var pass='123456';
 module.exports.connection=connection;
 var UserPrototype=require("./controllers/user.js").UserPrototype;
+var airlinePrototype=require("./controllers/airline.js").airlinePrototype;
 const app=exp();
 
 app.set('view engine', 'ejs');
@@ -74,6 +75,20 @@ res.render("airlineSignup.ejs");
 app.get("/addFlight",(req,res)=>{
 res.render("addflight.ejs");
 }); //Css or bootstrap
+app.post("/addFlight",(req,res)=>{
+	airlinePrototype.addFlightRequest(12345,'Karachi','Ontario','11/12/19 4:00pm').then((info)=>{
+     console.log("Request for flight add made successfully");
+     
+	}).catch((msg)=>{
+
+		console.log("Request for flight add Failed");
+		console.log(msg);
+
+	});
+	res.redirect('/addflight');
+//res.render("addflight.ejs");
+}); //Css or bootstrap
+
 app.get("/cancelFlight",(req,res)=>{
 res.render("cancelflight.ejs");
 });
