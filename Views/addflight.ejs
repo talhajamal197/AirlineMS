@@ -1,9 +1,9 @@
 <html>
 <head>
 	<title>Add Flight</title>
-		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 
-  <link rel="stylesheet" type="text/css" href="addflight.css"> 
+  <link rel="stylesheet" type="text/css" href="styles/addflight.css"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -16,11 +16,11 @@
 <div class="topnav" id="myTopnav">
 <div class="navbar-brand"><a href="/" id="brandPlane" class="fa fa-plane"><span style="color:#FF1493;">SkyTek</span></a></div>
  
-  <a href="#Delay Flight">Signout</a>
+  <a href="#Signout">Signout</a>
   <a href="#Delay Flight">Delay Flight</a>
   <a href="#Cancel Flight">Cancel Flight</a>
   <a href="#Add Flight" class="active">Add Flight</a>
-  <a href="#Delay Flight">Profile</a>
+  <a href="#Profile">Profile</a>
 
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -37,48 +37,77 @@
   <form action="addflight" method="POST">
     <div class="row">
       <div class="col-25">
-        <label for="fname">Flight Number</label>
+        <label for="Airline ID">Airline ID</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="fname" placeholder="Flight Number">
+        <input type="text" id="Airline ID" name="Airline ID" placeholder="Airline ID">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="acity">Arrival City</label>
+        <label for="Flight Number">Flight Number</label>
       </div>
       <div class="col-75">
-        <input type="text" id="acity" name="acity" placeholder="Arrival City">
+        <input type="text" id="Flight Number" name="Flight Number" placeholder="Flight Number">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="dcity">Destination City</label>
+        <label for="Source">Source</label>
       </div>
       <div class="col-75">
-      	  <input type="text" id="dcity" name="dcity" placeholder="Destination City">
+        <input type="text" id="Source" name="Source" placeholder="Source">
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="stay">Stay</label>
+        <label for="Destination">Destination</label>
       </div>
-      <div class="col-25">
-          <input type="text" id="stay1" name="stay1" placeholder="stay1">
-      </div>
-      <div class="col-25">
-          <input type="text" id="stay2" name="stay2" placeholder="stay2">
-      </div>
-      <div class="col-25">
-          <input type="text" id="stay3" name="stay3" placeholder="stay3">
+      <div class="col-75">
+      	  <input type="text" id="Destination" name="Destination" placeholder="Destination">
       </div>
     </div>
     <div class="row">
      <div class="col-25">
-       <label for="atime">Arrival Time</label>
+       <label for="Departure Time">Departure Time</label>
       </div>
      <div class="col-75">
-       <input type="datetime-local" id="atime" name="atime" placeholder="Atime">
+       <input type="datetime-local" id="Departure Time" name="Departure Time" placeholder="Atime">
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-25">
+       <label for="BSeat">Seats In Business Class</label>
+      </div>
+     <div class="col-75">
+       <input type="text" id="BSeat" name="BSeat" placeholder="50">
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-25">
+       <label for="BPrice">Price</label>
+      </div>
+     <div class="col-75">
+       <input type="text" id="BPrice" name="BPrice" placeholder="1000000">
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-25">
+       <label for="BSeat">Seats In Economic Class</label>
+      </div>
+     <div class="col-75">
+       <input type="text" id="ESeat" name="ESeat" placeholder="50">
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-25">
+       <label for="EPrice">Price</label>
+      </div>
+     <div class="col-75">
+       <input type="text" id="EPrice" name="EPrice" placeholder="1000000">
      </div>
     </div>
     <div class="row">
