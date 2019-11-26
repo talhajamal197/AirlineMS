@@ -1,0 +1,83 @@
+<%- include ./partials/header.ejs %>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles/navBar.css">
+<link rel="stylesheet" type="text/css" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/admin.css">
+   
+</head>
+
+
+
+<body>
+  
+  <nav id="myNavBar"class="navbar navbar-expand-lg navbar-dark">
+  <div class="navbar-brand"><a href="/" id="brandPlane" class="fa fa-plane"><span style="color:rgb(0, 123, 255);">SkyTek</span></a></div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    
+       <ul class="navbar-nav ml-auto">
+        <li><a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a></li>
+      
+      <li><a class="nav-item nav-link" href="login">Login</a></li>
+      <li><a class="nav-item nav-link" href="#">Check Flights</a></li>
+      <li><a class="nav-item nav-link" href="#">Ticket Reservation</a></li>
+      </ul>
+    
+  </div>
+</nav>  
+
+               <style>
+                   th,tr{
+                       width: 29%;
+                   }
+                   th{
+
+                       background-color: #4CAF50;
+                   }
+               </style>
+
+
+                    <div class="container">
+                        <h2>Flights Added</h2>
+                             
+                        <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th>Flight</th>
+                            <th >Class</th>
+                            <th>Departure</th>
+                            <th class="my">Source</th>
+                            
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                <% for(i=0;i<flightAdded.length;i++) { %>    
+                                               
+                                              
+                                  <td> <%=flightAdded[i].FLIGHT_NUMBER %> </td>
+                                  <td> <%=flightAdded[i].FLIGHT_CLASS%> </td>
+                                  <td> <%=flightAdded[i].DEPARTURE_TIME%> </td>
+                                  <td><%=flightAdded[i].FLIGHT_SOURCE %> </td>
+                                  
+                                
+                                  
+                                </form>
+                
+                                </tr>
+                               <% } %>   
+                            
+                        </tbody>
+                        </table>
+                    </div>
+
+
+
+
+    
+</body>
+<%- include ./partials/footer.ejs %>
